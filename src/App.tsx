@@ -16,14 +16,14 @@ const MBTI_PROFILES: Record<string, DinoProfile> = {
 	},
 	ISFJ: {
 		bridge: "케라",
-		trait: "돌봄장인",
+		trait: "해피간병",
 		description:
 			"보이지 않는 곳에서도 팀을 챙기며, 묵묵히 모두의 컨디션을 지키는 배려형 공룡입니다.",
 		dietType: "초식형",
 	},
 	INFJ: {
 		bridge: "케라",
-		trait: "통찰요정",
+		trait: "대화중독",
 		description: "한마디로 분위기를 읽고 핵심을 짚어내며, 깊은 대화를 사랑하는 직관형 공룡입니다.",
 		dietType: "초식형",
 	},
@@ -35,7 +35,7 @@ const MBTI_PROFILES: Record<string, DinoProfile> = {
 	},
 	INTJ: {
 		bridge: "렉토",
-		trait: "전략천재",
+		trait: "효율킹콩",
 		description: "앞으로 벌어질 일을 미리 계산하며, 효율적인 루트를 설계하는 기획형 공룡입니다.",
 		dietType: "육식형",
 	},
@@ -48,7 +48,7 @@ const MBTI_PROFILES: Record<string, DinoProfile> = {
 	},
 	ESTP: {
 		bridge: "랩터",
-		trait: "순간돌진",
+		trait: "기습돌진",
 		description: "판이 깔리면 제일 먼저 뛰어들고, 현장감으로 승부하는 액션형 공룡입니다.",
 		dietType: "육식형",
 	},
@@ -61,7 +61,7 @@ const MBTI_PROFILES: Record<string, DinoProfile> = {
 	},
 	ENFP: {
 		bridge: "드론",
-		trait: "아이디어샘",
+		trait: "꽃밭파티",
 		description:
 			"새로운 가능성을 보면 눈이 반짝이며, 즉석에서도 신나는 판을 만드는 발상형 공룡입니다.",
 		dietType: "초식형",
@@ -74,37 +74,37 @@ const MBTI_PROFILES: Record<string, DinoProfile> = {
 	},
 	ESTJ: {
 		bridge: "도논",
-		trait: "지휘본능",
+		trait: "강력주먹",
 		description: "목표를 정하면 팀을 착착 정렬하고, 실행력을 끝까지 끌고 가는 리더형 공룡입니다.",
 		dietType: "육식형",
 	},
 	ESFJ: {
 		bridge: "브론토",
-		trait: "인싸매니저",
+		trait: "인싸기만",
 		description: "모두가 편안한 분위기를 만들고, 관계를 부드럽게 이어주는 소통형 공룡입니다.",
 		dietType: "초식형",
 	},
 	ENFJ: {
 		bridge: "케팔",
-		trait: "열정부스터",
+		trait: "사탕발림",
 		description: "사람의 강점을 금방 발견하고, 함께 성장하도록 동기를 불어넣는 코치형 공룡입니다.",
 		dietType: "초식형",
 	},
 	ENTJ: {
 		bridge: "티탄",
-		trait: "목표직진",
+		trait: "경주마",
 		description: "큰 그림을 그리고 빠르게 의사결정하며, 성과를 현실로 만드는 추진형 공룡입니다.",
 		dietType: "육식형",
 	},
 	ISTP: {
 		bridge: "키오",
-		trait: "만능수리",
+		trait: "뚝딱수리",
 		description: "도구를 쥐면 해결책이 떠오르고, 문제를 손으로 고쳐내는 실전형 공룡입니다.",
 		dietType: "육식형",
 	},
 	ISFP: {
 		bridge: "벨로",
-		trait: "감성장인",
+		trait: "눈물셀카",
 		description:
 			"자기만의 감각을 살려 디테일을 완성하고, 조용히 작품을 남기는 아티스트 공룡입니다.",
 		dietType: "초식형",
