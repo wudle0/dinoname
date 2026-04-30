@@ -1,4 +1,4 @@
-import { FormEvent, useMemo, useState } from "react";
+import { FormEvent, useEffect, useMemo, useState } from "react";
 
 type DinoProfile = {
 	bridge: string;
@@ -152,6 +152,7 @@ export default function App() {
 	const [realName, setRealName] = useState("");
 	const [selectedMbti, setSelectedMbti] = useState("");
 	const [loading, setLoading] = useState(false);
+	const [loadingEmoji, setLoadingEmoji] = useState<"🦖" | "🦕">("🦖");
 	const [submitted, setSubmitted] = useState<{
 		realName: string;
 		mbti: string;
@@ -170,17 +171,42 @@ export default function App() {
 		window.setTimeout(() => {
 			setSubmitted({ realName, mbti: selectedMbti });
 			setLoading(false);
-		}, 900);
+		}, 800);
 	};
+
+	useEffect(() => {
+		if (!loading) {
+			setLoadingEmoji("🦖");
+			return;
+		}
+
+		const intervalId = window.setInterval(() => {
+			setLoadingEmoji((prev) => (prev === "🦖" ? "🦕" : "🦖"));
+		}, 180);
+
+		return () => window.clearInterval(intervalId);
+	}, [loading]);
 
 	return (
 		<main className="page">
+			{loading && (
+				<div
+					className="loadingOverlay"
+					role="status"
+					aria-live="polite"
+					aria-label="공룡 이름 생성 중">
+					<div className="loadingCard">
+						<div className="loadingEmoji" aria-hidden>
+							{loadingEmoji}
+						</div>
+						<p>공룡 이름 추출 중...</p>
+					</div>
+				</div>
+			)}
 			<section className="hero">
-				<p className="eyebrow">EXPO SPECIAL</p>
+				<p className="eyebrow">DINO SPECIAL</p>
 				<h1>디노작명소</h1>
-				<p className="subtitle">
-					실명 + 특징 + 사우르스로 완성하는 나만의 공룡 도감 카드를 만들어보세요.
-				</p>
+				<p className="subtitle">귀여운 나만의 공룡이름을 작명해보세요!</p>
 			</section>
 
 			<section className="panel">
